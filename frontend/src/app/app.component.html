@@ -1,0 +1,22 @@
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand" routerLink="/">My E-commerce</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Navbar links on the left side -->
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a routerLink="/cart" class="nav-link" href="#">Cart<span class="ml-1" id="cart_count">{{cartCount}}</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+      </ul>
+      <!-- Centered search box -->
+      <div class="form-inline mx-auto">
+          <input class="form-control mr-sm-2" type="text" [(ngModel)]="searchText" (input)="clearSearch()" (keyup)="searchByEnterkey()" name="search" placeholder="Search products" aria-label="Search">
+          <button (click)="search()" class="btn btn-outline-light my-2 my-sm-0" type="button" >Search</button>
+      </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

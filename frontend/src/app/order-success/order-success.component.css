@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+.order-success-container {
+    text-align: center;
+}
+.order-success-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+.order-success-message {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #343a40;
+}

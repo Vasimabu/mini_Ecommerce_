@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "name": "iPhone 14 Pro Max",
+      "price": "1199.99",
+      "description": "Apple iPhone 14 Pro Max with A16 Bionic chip, 6.7-inch Super Retina XDR display, and ProMotion technology.",
+      "ratings": "4.8",
+      "category": "Smartphones",
+      "seller": "Apple Store",
+      "stock": "150",
+      "numOfReviews": 100,
+      "images": [
+        {
+          "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg"
+        },
+        {
+          "image": "https://example.com/images/iphone14promax_side.jpg"
+        }
+      ],
+      "id": "05af"
+    },
+    {
+      "name": "Samsung Galaxy S23 Ultra",
+      "price": "999.99",
+      "description": "Samsung Galaxy S23 Ultra with Snapdragon 8 Gen 2, 6.8-inch Dynamic AMOLED 2X display, and 200MP camera.",
+      "ratings": "4.7",
+      "category": "Smartphones",
+      "seller": "Samsung Store",
+      "stock": "200",
+      "numOfReviews": 150,
+      "images": [
+        {
+          "image": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s24-ultra-5g-sm-s928-0.jpg"
+        },
+        {
+          "image": "https://example.com/images/galaxyS23Ultra_back.jpg"
+        }
+      ],
+      "id": "d49f"
+    },
+    {
+      "name": "Google Pixel 7 Pro",
+      "price": "899.99",
+      "description": "Google Pixel 7 Pro with Google Tensor G2 chip, 6.7-inch LTPO AMOLED display, and advanced camera system.",
+      "ratings": "4.6",
+      "category": "Smartphones",
+      "seller": "Google Store",
+      "stock": "180",
+      "numOfReviews": 120,
+      "images": [
+        {
+          "image": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel7-pro-2.jpg"
+        },
+        {
+          "image": "https://example.com/images/pixel7pro_side.jpg"
+        }
+      ],
+      "id": "477b"
+    },
+    {
+      "id": "8c31"
+    }
+  ]
+}

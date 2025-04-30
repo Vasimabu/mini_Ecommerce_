@@ -1,0 +1,116 @@
+<!-- 
+    <div class="container mt-5">
+        <div class="row">
+        
+            <div class="col-md-6">
+                <img src="product-image.jpg" alt="Product Name" class="img-fluid">
+            </div>
+
+            
+            <div class="col-md-6">
+                <h1 class="font-weight-bold">Product Name</h1>
+                <p class="text-muted price">$199.99</p>
+                <div class="mb-3">
+                    <strong>Availability:</strong>
+                    <span class="text-success">In Stock</span>
+                </div>
+
+                <div class="mb-3">
+                    <strong>Ratings:</strong>
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> 
+                </div>
+
+                <div class="quantity">
+                    <button class="minus" aria-label="Decrease">−</button>
+                    <input type="number" id="quantity" class="form-control" value="1" min="1">
+                    <button class="plus" aria-label="Increase">+</button>
+                </div>
+
+                <button class="btn btn-primary btn-lg mt-3">Add to Cart</button>
+                <button class="btn btn-outline-secondary btn-lg mt-3">Buy Now</button>
+
+                <h4 class="mt-4">Description:</h4>
+                <p class="lead">This is a comprehensive description of the product highlighting features, benefits, and specifications that make it a great choice for customers.</p>
+
+                <button class="btn btn-link mt-3">Read Reviews</button>
+            </div>
+        </div>
+    </div> -->
+  
+
+    <div class="container mt-5" *ngIf="products">
+        <div class="row">
+          <!-- Product Image -->
+          <div class="col-md-6 product-image-container">
+            <img *ngIf="products.Images.length > 0" [src]="products.Images[0].image" class="img-fluid" alt="Product Image">
+            <div *ngIf="products.Images.length === 0">No image available</div>
+          </div>
+          
+          <!-- Product Details -->
+          <div class="col-md-6">
+            <h1 class="product-title">{{ products.Name }}</h1>
+            <h4 class="product-price">{{ products.Price }}</h4>
+            
+            <div class="d-flex align-items-center mt-3">
+              <div class="quantity-controls">
+                <button class="quantity-btn" (click)="decrementQuantity()">-</button>
+                <input id="quantityDisplay" class="quantity-display" type="text" [(ngModel)]="quantity" readonly>
+                <button class="quantity-button" (click)="incrementQuantity()">+</button>
+              </div>
+              <button class="add-to-cart-btn ml-3" (click)="addToCart()">Add to Cart</button>
+            </div>
+            
+            <div class="rating-outer mt-3">
+              <div class="rating-inner" [ngStyle]="{'width': products.Ratings / 5 * 100 + '%'}"></div>
+            </div>
+            
+            <div class="mt-2">
+              Status: 
+              <strong [ngStyle]="{'color': products.Stock > 0 ? 'green' : 'red'}">
+                {{ products.Stock > 0 ? 'In Stock' : 'Out Of Stock' }}
+              </strong>
+            </div>
+            
+            <h4 class="mt-2">Description:</h4>
+            <div class="product-description">{{ products.Description }}</div>
+            <div class="mt-2">Sold by: <strong>{{ products.Seller }}</strong></div>
+            
+            <div class="review-form mt-4">
+              <h5>Submit a Review</h5>
+              <form>
+                <div class="form-group">
+                  <label for="reviewText">Your Review:</label>
+                  <textarea id="reviewText" class="form-control" rows="4" placeholder="Write your review here"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="rating">Rating:</label>
+                  <select id="rating" class="form-control">
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Display a message if no product is found -->
+     <div *ngIf="!products">
+        <h3>No products to display</h3>
+      </div> 
+      
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
